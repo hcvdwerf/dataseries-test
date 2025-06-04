@@ -1,80 +1,35 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct:  <http://purl.org/dc/terms/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex:   <http://example.org/> .
 
-# --- Dataset Series ---
+# Dataset Series
+ex:series-1 a dcat:DatasetSeries ;
+    dct:title "Air Quality Readings (Yearly)" ;
+    dct:description "This series contains annual air quality measurement datasets from 2022 to 2024." ;
+    dct:identifier "series-1" ;
+    dct:issued "2022-01-01T00:00:00Z"^^xsd:dateTime ;
+    dcat:first ex:dataset-2022 ;
+    dcat:last ex:dataset-2024 .
 
-ex:series-covid19-cases a dcat:DatasetSeries ;
-    dct:title "COVID-19 Case Reports (Monthly)" ;
-    dct:description "A time series of monthly COVID-19 case statistics." ;
-    dct:identifier "series-covid19-cases" ;
-    dct:publisher ex:public-health-agency ;
-    dct:issued "2023-01-01T00:00:00Z"^^xsd:dateTime ;
-    dct:modified "2025-06-01T00:00:00Z"^^xsd:dateTime ;
-    dcat:first ex:dataset-covid19-2023-01 ;
-    dcat:last ex:dataset-covid19-2025-05 ;
-    dcat:distribution ex:distribution-covid19-series-overview .
+# Dataset for 2022
+ex:dataset-2022 a dcat:Dataset ;
+    dct:title "Air Quality 2022" ;
+    dct:description "Air quality data and statistics for the year 2022." ;
+    dcat:inSeries ex:series-1 ;
+    dcat:next ex:dataset-2023 .
 
-# --- Series-level distribution (optional) ---
+# Dataset for 2023
+ex:dataset-2023 a dcat:Dataset ;
+    dct:title "Air Quality 2023" ;
+    dct:description "Air quality data and statistics for the year 2023." ;
+    dcat:inSeries ex:series-1 ;
+    dcat:prev ex:dataset-2022 ;
+    dcat:next ex:dataset-2024 .
 
-ex:distribution-covid19-series-overview a dcat:Distribution ;
-    dct:title "COVID-19 Case Series Overview (CSV)" ;
-    dct:issued "2023-01-01T00:00:00Z"^^xsd:dateTime ;
-    dcat:accessURL <https://example.org/data/covid19/series-overview.csv> .
-
-# --- Publisher agent ---
-
-ex:public-health-agency a foaf:Agent ;
-    foaf:name "National Public Health Agency" .
-
-# --- Dataset member: January 2023 ---
-
-ex:dataset-covid19-2023-01 a dcat:Dataset ;
-    dct:title "COVID-19 Case Report - January 2023" ;
-    dct:description "Case counts for January 2023" ;
-    dct:identifier "covid19-2023-01" ;
-    dct:issued "2023-02-01T00:00:00Z"^^xsd:dateTime ;
-    dct:modified "2023-02-01T00:00:00Z"^^xsd:dateTime ;
-    dcat:inSeries ex:series-covid19-cases ;
-    dcat:next ex:dataset-covid19-2023-02 ;
-    dcat:distribution ex:dist-2023-01 ;
-    dct:publisher ex:public-health-agency .
-
-ex:dist-2023-01 a dcat:Distribution ;
-    dct:title "COVID-19 January 2023 Data (CSV)" ;
-    dcat:accessURL <https://example.org/data/covid19/2023-01.csv> .
-
-# --- Dataset member: February 2023 ---
-
-ex:dataset-covid19-2023-02 a dcat:Dataset ;
-    dct:title "COVID-19 Case Report - February 2023" ;
-    dct:identifier "covid19-2023-02" ;
-    dct:description "Case counts for January 2024" ;
-    dct:issued "2023-03-01T00:00:00Z"^^xsd:dateTime ;
-    dcat:inSeries ex:series-covid19-cases ;
-    dcat:prev ex:dataset-covid19-2023-01 ;
-    dcat:next ex:dataset-covid19-2023-03 ;
-    dct:publisher ex:public-health-agency ;
-    dcat:distribution ex:dist-2023-02 .
-
-ex:dist-2023-02 a dcat:Distribution ;
-    dct:title "COVID-19 February 2023 Data (CSV)" ;
-    dcat:accessURL <https://example.org/data/covid19/2023-02.csv> .
-
-# --- Dataset member: May 2025 (last) ---
-
-ex:dataset-covid19-2025-05 a dcat:Dataset ;
-    dct:title "COVID-19 Case Report - May 2025" ;
-    dct:identifier "covid19-2025-05" ;
-    dct:description "Case counts for January 2025" ;
-    dct:issued "2025-06-01T00:00:00Z"^^xsd:dateTime ;
-    dcat:inSeries ex:series-covid19-cases ;
-    dcat:prev ex:dataset-covid19-2025-04 ;
-    dct:publisher ex:public-health-agency ;
-    dcat:distribution ex:dist-2025-05 .
-
-ex:dist-2025-05 a dcat:Distribution ;
-    dct:title "COVID-19 May 2025 Data (CSV)" ;
-    dcat:accessURL <https://example.org/data/covid19/2025-05.csv> .
+# Dataset for 2024
+ex:dataset-2024 a dcat:Dataset ;
+    dct:title "Air Quality 2024" ;
+    dct:description "Air quality data and statistics for the year 2024." ;
+    dcat:inSeries ex:series-1 ;
+    dcat:prev ex:dataset-2023 .
