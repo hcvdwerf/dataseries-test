@@ -5,23 +5,23 @@
 
 # Dataset Series
 ex:series-1 a dcat:DatasetSeries ;
-    dct:title "Air Quality Readings (Yearly)" ;
+    dct:title "Air Quality Readings (Yearly) 2" ;
     dct:description "This series contains annual air quality measurement datasets from 2022 to 2024." ;
-    dct:identifier "series-1" ;
+    dct:identifier "series-2" ;
     dct:issued "2022-01-01T00:00:00Z"^^xsd:dateTime ;
     dcat:first ex:dataset-2022 ;
     dcat:last ex:dataset-2024 .
 
 # Dataset for 2022
 ex:dataset-2022 a dcat:Dataset ;
-    dct:title "Air Quality 2022" ;
+    dct:title "Air Quality 2013" ;
     dct:description "Air quality data and statistics for the year 2022." ;
     dcat:inSeries ex:series-1 ;
     dcat:next ex:dataset-2023 .
 
 # Dataset for 2023
 ex:dataset-2023 a dcat:Dataset ;
-    dct:title "Air Quality 2023" ;
+    dct:title "Air Quality 2014" ;
     dct:description "Air quality data and statistics for the year 2023." ;
     dcat:inSeries ex:series-1 ;
     dcat:prev ex:dataset-2022 ;
@@ -29,7 +29,7 @@ ex:dataset-2023 a dcat:Dataset ;
 
 # Dataset for 2024
 ex:dataset-2024 a dcat:Dataset ;
-    dct:title "Air Quality 2024" ;
+    dct:title "Air Quality 2015" ;
     dct:description "Air quality data and statistics for the year 2024." ;
     dcat:inSeries ex:series-1 ;
     dcat:prev ex:dataset-2023 .
