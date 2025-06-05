@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dcat="http://www.w3.org/ns/dcat#"
+   xmlns:dct="http://purl.org/dc/terms/"
+   xmlns:donl="https://data.overheid.nl/dcat.rdf#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:v="http://www.w3.org/2006/vcard/"
+>
+  <rdf:Description rdf:about="https://data.overheid.nl/dataset/299-overledenen--doodsoorzaak--kwartaal-en-jaar-overlijden">
+    <donl:status rdf:resource="http://data.overheid.nl/status/beschikbaar"/>
+    <dct:description xml:lang="nl">Deze tabel bevat cijfers over de onderliggende doodsoorzaken van overleden inwoners van Nederland. De cijfers zijn uitgesplitst per kwartaal en jaar van overlijden naar een beperkt aantal doodsoorzaken.
+
+De sterfte aan COVID-19 of de ziekte veroorzaakt door het nieuwe coronavirus wordt gecodeerd met de ICD-10 codes U07.1 of U07.2. Deze codes zijn door de Wereldgezondheidsorganisatie (WHO) als 'emergency codes' of tijdelijke noodcodes neergezet en zullen later in een hoofdstuk van de ICD10 opgenomen worden. Deze codes worden daarom nu nog in de kwartaal tabel geteld bij de categorie 'Overige doodsoorzaken'.
+
+Het CBS is in het statistiekjaar 2013 overgestapt op het gebruik van internationale software voor automatisch coderen van de doodsoorzaken. Hiermee zijn de cijfers beter reproduceerbaar en internationaal vergelijkbaar. Wel zijn er enkele forse verschuivingen te zien in de doodsoorzaken (zie paragraaf 4).
+
+Gegevens beschikbaar vanaf: 1e kwartaal 1996
+
+Status van de cijfers:
+De cijfers over 2024 zijn voorlopig, de overige cijfers zijn definitief. 
+
+Wijzigingen per 16 mei 2025:
+De voorlopige cijfers over het vierde kwartaal en het totaal van 2024 zijn toegevoegd, de cijfers over de eerste drie kwartalen van 2024 zijn aangepast. 
+
+Wanneer komen er nieuwe cijfers?
+In het derde kwartaal van 2025 verschijnen cijfers over het eerste kwartaal van 2025.</dct:description>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <dcat:distribution rdf:nodeID="dataset.299-overledenen--doodsoorzaak--kwartaal-en-jaar-overlijden.distribution.0"/>
+    <dcat:contactPoint rdf:nodeID="dataset.299-overledenen--doodsoorzaak--kwartaal-en-jaar-overlijden.contactPoint"/>
+    <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/QUARTERLY"/>
+    <dct:creator rdf:resource="http://standaarden.overheid.nl/owms/terms/Centraal_Bureau_voor_de_Statistiek"/>
+    <dct:title xml:lang="nl">Overledenen; doodsoorzaak, kwartaal en jaar overlijden</dct:title>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <dcat:landingPage rdf:resource="https://opendata.cbs.nl/statline/portal.html?_la=nl&amp;_catalog=CBS&amp;tableId=82899NED"/>
+    <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/deed.nl"/>
+    <dcat:distribution rdf:nodeID="dataset.299-overledenen--doodsoorzaak--kwartaal-en-jaar-overlijden.distribution.1"/>
+    <dct:publisher rdf:resource="http://standaarden.overheid.nl/owms/terms/Centraal_Bureau_voor_de_Statistiek"/>
+    <dct:identifier>https://opendata.cbs.nl/ODataApi/OData/82899NED</dct:identifier>
+    <donl:sourceCatalog rdf:resource="https://opendata.cbs.nl/ODataCatalog/"/>
+    <dcat:theme rdf:resource="http://standaarden.overheid.nl/owms/terms/Zorg_en_gezondheid"/>
+    <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/NLD"/>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#datetime">2025-05-16T02:00:00</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="dataset.299-overledenen--doodsoorzaak--kwartaal-en-jaar-overlijden.contactPoint">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/Kind"/>
+    <v:email>mailto:infoservice@cbs.nl</v:email>
+    <v:fn xml:lang="nl">Centraal Bureau voor de Statistiek</v:fn>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="dataset.299-overledenen--doodsoorzaak--kwartaal-en-jaar-overlijden.distribution.0">
+    <dcat:downloadURL rdf:resource="https://opendata.cbs.nl/ODataApi/OData/82899NED"/>
+    <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/deed.nl"/>
+    <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/application/json"/>
+    <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+    <donl:distributionType rdf:resource="https://data.overheid.nl/distributiontype/webservice"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dct:description xml:lang="nl">Overleden inwoners van Nederland naar onderliggende doodsoorzaak per 
+kwartaal en jaar van overlijden</dct:description>
+    <dcat:accessURL rdf:resource="https://opendata.cbs.nl/statline/#/CBS/nl/dataset/82899NED/table"/>
+    <dct:title xml:lang="nl">API</dct:title>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#datetime">2025-05-16T05:07:25</dct:issued>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="dataset.299-overledenen--doodsoorzaak--kwartaal-en-jaar-overlijden.distribution.1">
+    <donl:distributionType rdf:resource="https://data.overheid.nl/distributiontype/webservice"/>
+    <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/application/atom+xml"/>
+    <dcat:accessURL rdf:resource="https://opendata.cbs.nl/statline/#/CBS/nl/dataset/82899NED/table"/>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#datetime">2025-05-16T05:07:25</dct:issued>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/ATOM"/>
+    <dct:title xml:lang="nl">Feed</dct:title>
+    <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/deed.nl"/>
+    <dcat:downloadURL rdf:resource="https://opendata.cbs.nl/ODataFeed/OData/82899NED"/>
+    <dct:description xml:lang="nl">Overleden inwoners van Nederland naar onderliggende doodsoorzaak per 
+kwartaal en jaar van overlijden</dct:description>
+  </rdf:Description>
+</rdf:RDF>
